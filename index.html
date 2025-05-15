@@ -1,0 +1,1756 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT"
+      crossorigin="anonymous"
+    />
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- DataTables CSS and JS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css"
+    />
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+    <script src="js/jquery.js"></script>
+    <title>JQuery Practice</title>
+  </head>
+  <body>
+    <div class="container-md p-3 mb-5">
+      <h1 class="mt-5">Example Table</h1>
+    </div>
+    <div class="container-md shadow p-3 mb-5 bg-body-tertiary rounded">
+      <!-- Table -->
+      <table class="table table-hover table-sortable" id="exampleTable">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">County</th>
+            <th scope="col">Municipality</th>
+            <th scope="col">Grantor</th>
+            <th scope="col">Grantee</th>
+            <th scope="col">Address</th>
+            <th scope="col">Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>WAUKESHA</td>
+            <td>HARTLAND</td>
+            <td>STUPAR LLC</td>
+            <td>TOLLEFSON ENTERPRISES LLC</td>
+            <td>621 E Industrial Dr</td>
+            <td>310000</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>WAUKESHA</td>
+            <td>WAUKESHA</td>
+            <td>JMJ REAL ESTATE AQUISITION LLC</td>
+            <td>CCS LEASING LLC</td>
+            <td>417 Barney St</td>
+            <td>155000</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>DANE</td>
+            <td>VERONA</td>
+            <td>TRIPLE RW LLC</td>
+            <td>ALDO PARTNERS LLC</td>
+            <td>507 Bruce St</td>
+            <td>299900</td>
+          </tr>
+          <tr>
+            <th scope="row">4</th>
+            <td>DANE</td>
+            <td>WAUNAKEE</td>
+            <td>SIX MILE LLC</td>
+            <td>CREEKSIDE HOLDINGS LLC</td>
+            <td>806 S Division St</td>
+            <td>840000</td>
+          </tr>
+          <tr>
+            <th scope="row">5</th>
+            <td>GRANT</td>
+            <td>CUBA CITY</td>
+            <td>CUBA CITY REAL ESTATE REAL ESTATE</td>
+            <td>JT BLACKBOURN LLC</td>
+            <td>1010 S Main St</td>
+            <td>525000</td>
+          </tr>
+          <tr>
+            <th scope="row">6</th>
+            <td>DANE</td>
+            <td>FITCHBURG</td>
+            <td>STEVEN C & SUSAN J ANDERSON TRUSTEES</td>
+            <td>4756 MURPHY ROAD LLC</td>
+            <td>4756 Murphy Rd</td>
+            <td>400000</td>
+          </tr>
+          <tr>
+            <th scope="row">7</th>
+            <td>DANE</td>
+            <td>SUN PRAIRIE</td>
+            <td>GUNDERSON SCHLUPP LLC</td>
+            <td>TOTAL HOME SERVICE CENTER LLC</td>
+            <td>584 Progress Way</td>
+            <td>1050000</td>
+          </tr>
+          <tr>
+            <th scope="row">8</th>
+            <td>DANE</td>
+            <td>MADISON</td>
+            <td>HEINRITZRICK C</td>
+            <td>4601 TOMPKINS DRIVELLC</td>
+            <td>4601 Tompkins Dr</td>
+            <td>2150000</td>
+          </tr>
+          <tr>
+            <th scope="row">9</th>
+            <td>RACINE</td>
+            <td>RACINE</td>
+            <td>ROGAN SHOES INC</td>
+            <td>1171 SOUTH ST LLC</td>
+            <td>2913 Carlisle Ave</td>
+            <td>705000</td>
+          </tr>
+          <tr>
+            <th scope="row">10</th>
+            <td>KENOSHA</td>
+            <td>PLEASANT PRAIRIE</td>
+            <td>FFIII WI PLEASANT PRAIRIE LLC</td>
+            <td>STAG INDUSTRIAL HOLDINGS LLC</td>
+            <td>8901 102nd St</td>
+            <td>6225000</td>
+          </tr>
+          <tr>
+            <th scope="row">11</th>
+            <td>ASHLAND</td>
+            <td>ASHLAND</td>
+            <td>SECURE ASSETS LLC</td>
+            <td>UP NORTH FOOD SERVICELLC</td>
+            <td>900 Rail Dr</td>
+            <td>200000</td>
+          </tr>
+          <tr>
+            <th scope="row">12</th>
+            <td>LA CROSSE</td>
+            <td>LA CROSSE</td>
+            <td>LA CROSSE BUILDERS EXCHANGE INC</td>
+            <td>VARC INC</td>
+            <td>427 Gillette St</td>
+            <td>485000</td>
+          </tr>
+          <tr>
+            <th scope="row">13</th>
+            <td>BARRON</td>
+            <td>RICE LAKE</td>
+            <td>LMG HOLDINGS LLC</td>
+            <td>TRI-SINZ INC</td>
+            <td>2500 College Dr</td>
+            <td>370000</td>
+          </tr>
+          <tr>
+            <th scope="row">14</th>
+            <td>MARATHON</td>
+            <td>MARATHON</td>
+            <td>VANDERLOOP ENTERRPISES LLC</td>
+            <td>RAYMOND STREVELER</td>
+            <td>609 4th St</td>
+            <td>370000</td>
+          </tr>
+          <tr>
+            <th scope="row">15</th>
+            <td>MARATHON</td>
+            <td>MOSINEE</td>
+            <td>VIKING HOLDING LLC</td>
+            <td>PENGUIN PROPERTIES LLC</td>
+            <td>1075 Indianhead Dr</td>
+            <td>320000</td>
+          </tr>
+          <tr>
+            <th scope="row">16</th>
+            <td>CHIPPEWA</td>
+            <td>LAKE HALLIE</td>
+            <td>RIDGEWAY PROPERTIES LLC</td>
+            <td>SIGH PROPERTIES LLC</td>
+            <td>4033 123rd St</td>
+            <td>673670</td>
+          </tr>
+          <tr>
+            <th scope="row">17</th>
+            <td>ST CROIX</td>
+            <td>SOMERSET</td>
+            <td>LIND SHOE COMPANY</td>
+            <td>QUALITY REAL ESTATE PARTNERS LLC</td>
+            <td>501 Laser Dr</td>
+            <td>1225000</td>
+          </tr>
+          <tr>
+            <th scope="row">18</th>
+            <td>SHAWANO</td>
+            <td>GRESHAM</td>
+            <td>HUNTINGTON PROPERTIES LLC</td>
+            <td>STUYVENBERG PROPERTIES LLC</td>
+            <td>700 Commerce Way</td>
+            <td>80000</td>
+          </tr>
+          <tr>
+            <th scope="row">19</th>
+            <td>FLORENCE</td>
+            <td>FLORENCE</td>
+            <td>B & H PATTERN INC</td>
+            <td>HANNAH & BROTHERS PROPERTIES LLC</td>
+            <td>3566 Brewery Ln</td>
+            <td>130000</td>
+          </tr>
+          <tr>
+            <th scope="row">20</th>
+            <td>ROCK</td>
+            <td>BELOIT</td>
+            <td>BYLINE BANK</td>
+            <td>JAMES AND M. CARROLL SHEPHERD</td>
+            <td>1626 Summit Ave</td>
+            <td>83700</td>
+          </tr>
+          <tr>
+            <th scope="row">21</th>
+            <td>DANE</td>
+            <td>SUN PRAIRIE</td>
+            <td>SELECT REALESTATE MGMT GROUP</td>
+            <td>RM GROUP LLC</td>
+            <td>320 Progress Way</td>
+            <td>650000</td>
+          </tr>
+          <tr>
+            <th scope="row">22</th>
+            <td>ROCK</td>
+            <td>BELOIT</td>
+            <td>ANTHONY MORELLO REVOCABLE TRUST DATED JANUARY 41996 ET AL</td>
+            <td>FRANK BEER DISTRIBUTORS INC</td>
+            <td>1531 E Gale Dr</td>
+            <td>400000</td>
+          </tr>
+          <tr>
+            <th scope="row">23</th>
+            <td>WALWORTH</td>
+            <td>WHITEWATER</td>
+            <td>FIFTH THIRD BANK</td>
+            <td>WHITEWATER INDUSTRIAL INVESTORS LLC</td>
+            <td>848 E Commercial Ave</td>
+            <td>260000</td>
+          </tr>
+          <tr>
+            <th scope="row">24</th>
+            <td>DANE</td>
+            <td>FITCHBURG</td>
+            <td>UNITED VACCINES INC</td>
+            <td>T5 PROPERTIES</td>
+            <td>2919 Commerce Park Dr</td>
+            <td>750000</td>
+          </tr>
+          <tr>
+            <th scope="row">25</th>
+            <td>WALWORTH</td>
+            <td>DELAVAN</td>
+            <td>DANIEL G BAUGHMAN</td>
+            <td>GENCAP DELAVAN 73 LLC</td>
+            <td>820 E Washington</td>
+            <td>1045000</td>
+          </tr>
+          <tr>
+            <th scope="row">26</th>
+            <td>WALWORTH</td>
+            <td>ELKHORN</td>
+            <td>LGS INVESTMENTS LLC</td>
+            <td>STAG INDUSTRIAL HOLDINGS LLC</td>
+            <td>555 Koopman Ln</td>
+            <td>5050000</td>
+          </tr>
+          <tr>
+            <th scope="row">27</th>
+            <td>WAUKESHA</td>
+            <td>MUKWONAGO</td>
+            <td>CI BANKER WIRE AND IRON WORKS LLC</td>
+            <td>CHR HANSEN INC</td>
+            <td>600 Perkins Dr</td>
+            <td>6600000</td>
+          </tr>
+          <tr>
+            <th scope="row">28</th>
+            <td>MILWAUKEE</td>
+            <td>BROWN DEER</td>
+            <td>SCOTT J. COLLINS</td>
+            <td>MKE SHOP LLC</td>
+            <td>9090 N 51st St</td>
+            <td>375000</td>
+          </tr>
+          <tr>
+            <th scope="row">29</th>
+            <td>MILWAUKEE</td>
+            <td>WEST MILWAUKEE</td>
+            <td>RYAN DIVERSIFIED INVESTMENTSLLC</td>
+            <td>SMS INVESTMENT GROUP LLC</td>
+            <td>5412 W Burnham St</td>
+            <td>185000</td>
+          </tr>
+          <tr>
+            <th scope="row">30</th>
+            <td>KENOSHA</td>
+            <td>KENOSHA</td>
+            <td>FFC LLC</td>
+            <td>RICK GRABOT</td>
+            <td>3227 14th Ave</td>
+            <td>170000</td>
+          </tr>
+          <tr>
+            <th scope="row">31</th>
+            <td>MILWAUKEE</td>
+            <td>MILWAUKEE</td>
+            <td>DELTA PRINTING CORP</td>
+            <td>THOMAS STRAUB</td>
+            <td>3247 W Vliet St</td>
+            <td>125000</td>
+          </tr>
+          <tr>
+            <th scope="row">32</th>
+            <td>MILWAUKEE</td>
+            <td>MILWAUKEE</td>
+            <td>RBRF III LLC</td>
+            <td>MHK LLC</td>
+            <td>5900 N 94th St</td>
+            <td>300000</td>
+          </tr>
+          <tr>
+            <th scope="row">33</th>
+            <td>MILWAUKEE</td>
+            <td>MILWAUKEE</td>
+            <td>THE RANDY D AND SHELBY J ROERING LIVING TRUST</td>
+            <td>POIEMA REAL ESTATE LLC</td>
+            <td>8331 W Calumet Rd</td>
+            <td>380000</td>
+          </tr>
+          <tr>
+            <th scope="row">34</th>
+            <td>RACINE</td>
+            <td>RACINE</td>
+            <td>ARLEY D NORBY</td>
+            <td>VELIA BOBADILLA</td>
+            <td>1439 Junction Ave</td>
+            <td>145000</td>
+          </tr>
+          <tr>
+            <th scope="row">35</th>
+            <td>WAUKESHA</td>
+            <td>NEW BERLIN</td>
+            <td>RUPNOW DOUG N & JUDITH A</td>
+            <td>GROUSE TRACKS LLC</td>
+            <td>15885 W Overland Dr</td>
+            <td>500000</td>
+          </tr>
+          <tr>
+            <th scope="row">36</th>
+            <td>WAUKESHA</td>
+            <td>MENOMONEE FALLS</td>
+            <td>COUNCIL CREST PROPERTIES</td>
+            <td>JBEAM LLC</td>
+            <td>N94 W14588 Garwin Mace Dr</td>
+            <td>707500</td>
+          </tr>
+          <tr>
+            <th scope="row">37</th>
+            <td>WAUKESHA</td>
+            <td>MENOMONEE FALLS</td>
+            <td>JOURNAL SENTINEL INC</td>
+            <td>JK FISCHER PROPERTIES LLC</td>
+            <td>W187 N8620 Maple Rd</td>
+            <td>575000</td>
+          </tr>
+          <tr>
+            <th scope="row">38</th>
+            <td>WAUKESHA</td>
+            <td>BUTLER</td>
+            <td>LOMBNESS PROPERTY MGMT LLC</td>
+            <td>HOESLY HOLDINGS LLC</td>
+            <td>5170 N 126th St</td>
+            <td>765000</td>
+          </tr>
+          <tr>
+            <th scope="row">39</th>
+            <td>MILWAUKEE</td>
+            <td>GLENDALE</td>
+            <td>GS HAMMILL LLC</td>
+            <td>JUST ONE MORE MINISTRY INC</td>
+            <td>4180 N Lydell Ave</td>
+            <td>548000</td>
+          </tr>
+          <tr>
+            <th scope="row">40</th>
+            <td>WASHINGTON</td>
+            <td>GERMANTOWN</td>
+            <td>GERMANTOWN PROPERTIES MCCORMICK LLC</td>
+            <td>SSNP LLC</td>
+            <td>W194 N11695 Mccormick Dr</td>
+            <td>1345000</td>
+          </tr>
+          <tr>
+            <th scope="row">41</th>
+            <td>MILWAUKEE</td>
+            <td>CUDAHY</td>
+            <td>CISKOLLC</td>
+            <td>LOVEJOY-SCHAEFERLLC</td>
+            <td>2122 E Birchwood Ave</td>
+            <td>1332000</td>
+          </tr>
+          <tr>
+            <th scope="row">42</th>
+            <td>WAUKESHA</td>
+            <td>MENOMONEE FALLS</td>
+            <td>JOHN P EIMERMAN TRUST</td>
+            <td>ENTRUSTMT PARTNERS LLC</td>
+            <td>N58 W14500 Shawn Cir</td>
+            <td>1500000</td>
+          </tr>
+          <tr>
+            <th scope="row">43</th>
+            <td>MILWAUKEE</td>
+            <td>FRANKLIN</td>
+            <td>TROYK LLC</td>
+            <td>CISKO LLC</td>
+            <td>9980 S Oakwood Park Dr</td>
+            <td>1870000</td>
+          </tr>
+          <tr>
+            <th scope="row">44</th>
+            <td>MILWAUKEE</td>
+            <td>WEST ALLIS</td>
+            <td>BENZ ENTERPRISES LLC</td>
+            <td>CITY BLOCK INVESTMENTS LLC</td>
+            <td>1907 S 89th St</td>
+            <td>500000</td>
+          </tr>
+          <tr>
+            <th scope="row">45</th>
+            <td>MILWAUKEE</td>
+            <td>MILWAUKEE</td>
+            <td>BG HOLDINGS LLC</td>
+            <td>BAY VIEW COMMONS LLC</td>
+            <td>2715 S Gladstone Pl</td>
+            <td>825000</td>
+          </tr>
+          <tr>
+            <th scope="row">46</th>
+            <td>OZAUKEE</td>
+            <td>SAUKVILLE</td>
+            <td>MATRIX REAL ESTATE PARTNERS LLC</td>
+            <td>DEKORA WOODS13 LLC</td>
+            <td>650 N Dekora Woods Blvd</td>
+            <td>2533000</td>
+          </tr>
+          <tr>
+            <th scope="row">47</th>
+            <td>RACINE</td>
+            <td>MOUNT PLEASANT</td>
+            <td>ROBIN CASE LLC</td>
+            <td>DOUGLAS M COLEMAN</td>
+            <td>2205 Durand Ave</td>
+            <td>1260000</td>
+          </tr>
+          <tr>
+            <th scope="row">48</th>
+            <td>MILWAUKEE</td>
+            <td>MILWAUKEE</td>
+            <td>NOHL REAL ESTATE INVESTMENTS LLC</td>
+            <td>HAVENWOODS 6360LLC</td>
+            <td>6360 N 60th St</td>
+            <td>1150000</td>
+          </tr>
+          <tr>
+            <th scope="row">49</th>
+            <td>KENOSHA</td>
+            <td>KENOSHA</td>
+            <td>KENOSHA NEWS DIV</td>
+            <td>5800 KENOSHA LLC</td>
+            <td>717 58th St</td>
+            <td>1665000</td>
+          </tr>
+          <tr>
+            <th scope="row">50</th>
+            <td>RACINE</td>
+            <td>MOUNT PLEASANT</td>
+            <td>M T CO LLC</td>
+            <td>VK 3535 OAKES LLC CO VENTURE ONE RE</td>
+            <td>3535 Oakes Rd</td>
+            <td>6900000</td>
+          </tr>
+          <tr>
+            <th scope="row">51</th>
+            <td>KENOSHA</td>
+            <td>KENOSHA</td>
+            <td>MPSL HOLDINGS LIIMITED</td>
+            <td>1205 65TH STREET LLC</td>
+            <td>1205 65th St</td>
+            <td>4850000</td>
+          </tr>
+          <tr>
+            <th scope="row">52</th>
+            <td>RACINE</td>
+            <td>MOUNT PLEASANT</td>
+            <td>VK 7601 DURAND LLC</td>
+            <td>BADGER SOLUTIONS LLC</td>
+            <td>7601 Durand Ave</td>
+            <td>15500000</td>
+          </tr>
+          <tr>
+            <th scope="row">53</th>
+            <td>MARATHON</td>
+            <td>WAUSAU</td>
+            <td>C E ACQUISITIONS LLC</td>
+            <td>ESKER INVESTMENTS LLC</td>
+            <td>350 S 86th Ave</td>
+            <td>195000</td>
+          </tr>
+          <tr>
+            <th scope="row">54</th>
+            <td>SAWYER</td>
+            <td>ROUND LAKE</td>
+            <td>MARY JANE MOFFETT</td>
+            <td>DAVID A AND ALFREDA T KRUSNIS</td>
+            <td>10518 W Twin Lake Rd</td>
+            <td>175000</td>
+          </tr>
+          <tr>
+            <th scope="row">55</th>
+            <td>CHIPPEWA</td>
+            <td>BLOOMER</td>
+            <td>GREGORY C SOUTHWORTH TRUST</td>
+            <td>R&M STOLT LLC</td>
+            <td>1103 9th Ave</td>
+            <td>189900</td>
+          </tr>
+          <tr>
+            <th scope="row">56</th>
+            <td>ST CROIX</td>
+            <td>HUDSON</td>
+            <td>UNLIMITED LEASING</td>
+            <td>EMMANUAL PROPERTIES WI</td>
+            <td>494 Cty Rd A</td>
+            <td>390000</td>
+          </tr>
+          <tr>
+            <th scope="row">57</th>
+            <td>BARRON</td>
+            <td>ALMENA</td>
+            <td>L & M GAZEBOS INC</td>
+            <td>THE ROBERTSON GROUP</td>
+            <td>380 Us Hwy 8 E</td>
+            <td>170000</td>
+          </tr>
+          <tr>
+            <th scope="row">58</th>
+            <td>CHIPPEWA</td>
+            <td>LAKE HALLIE</td>
+            <td>PATROW PROPBERTIES LLC</td>
+            <td>AZARA PROPERTIES</td>
+            <td>2937 S Prairie View Rd</td>
+            <td>765000</td>
+          </tr>
+          <tr>
+            <th scope="row">59</th>
+            <td>DOUGLAS</td>
+            <td>SUPERIOR</td>
+            <td>JUDITH A PIPER</td>
+            <td>TNC DEVELOPMENT</td>
+            <td>801 Weeks Ave</td>
+            <td>740000</td>
+          </tr>
+          <tr>
+            <th scope="row">60</th>
+            <td>ST CROIX</td>
+            <td>HUDSON</td>
+            <td>ANCHOR PAPER COMPANY</td>
+            <td>MEDICH PROPERTIES II LLC</td>
+            <td>1212 Beaudry Blvd</td>
+            <td>935000</td>
+          </tr>
+          <tr>
+            <th scope="row">61</th>
+            <td>EAU CLAIRE</td>
+            <td>EAU CLAIRE</td>
+            <td>VOLLAND INVESTMENT PROPERTIES LLC</td>
+            <td>IMBAR LLC</td>
+            <td>511 N Clairemont Ave</td>
+            <td>1250000</td>
+          </tr>
+          <tr>
+            <th scope="row">62</th>
+            <td>ST CROIX</td>
+            <td>SOMERSET</td>
+            <td>CONTRACT PACKAGING</td>
+            <td>VERCOM HOLDINGS LLC</td>
+            <td>422 Main St</td>
+            <td>775000</td>
+          </tr>
+          <tr>
+            <th scope="row">63</th>
+            <td>MARATHON</td>
+            <td>WESTON</td>
+            <td>ADC PROPERTIES LLC</td>
+            <td>NB LLC</td>
+            <td>5311 Fuller St</td>
+            <td>680000</td>
+          </tr>
+          <tr>
+            <th scope="row">64</th>
+            <td>MARATHON</td>
+            <td>WAUSAU</td>
+            <td>ROCKET INDUSTRIAL INC</td>
+            <td>MAC VENTURES LLC</td>
+            <td>4900 Stewart Ave</td>
+            <td>620000</td>
+          </tr>
+          <tr>
+            <th scope="row">65</th>
+            <td>MARATHON</td>
+            <td>SCHOFIELD</td>
+            <td>ROWEL LLC</td>
+            <td>AWF WISCONSIN PROPERTIES LLC</td>
+            <td>349 Alderson St</td>
+            <td>1365000</td>
+          </tr>
+          <tr>
+            <th scope="row">66</th>
+            <td>MARATHON</td>
+            <td>WAUSAU</td>
+            <td>B ELWOOOD LLC</td>
+            <td>PIPER PRODUCTS INC</td>
+            <td>300 S 84th Ave</td>
+            <td>2500000</td>
+          </tr>
+          <tr>
+            <th scope="row">67</th>
+            <td>LA CROSSE</td>
+            <td>LA CROSSE</td>
+            <td>LEE ENTERPRISES INC</td>
+            <td>CLIFFORD AND SANDRA LECLEIR TRUST</td>
+            <td>401 N 3rd St</td>
+            <td>1900000</td>
+          </tr>
+          <tr>
+            <th scope="row">68</th>
+            <td>DOUGLAS</td>
+            <td>SUPERIOR</td>
+            <td>LAKEHEAD CONSTRUCTORSINC</td>
+            <td>SUPERIOR REFINING COMPANY LLC</td>
+            <td>2916 Hill Ave</td>
+            <td>1850000</td>
+          </tr>
+          <tr>
+            <th scope="row">69</th>
+            <td>LA CROSSE</td>
+            <td>LA CROSSE</td>
+            <td>CENTURYTEL OF WISCONSIN LLC</td>
+            <td>WEBER HOLDINGS LLC</td>
+            <td>333 N Front St</td>
+            <td>11000000</td>
+          </tr>
+          <tr>
+            <th scope="row">70</th>
+            <td>GREEN LAKE</td>
+            <td>BROOKLYN</td>
+            <td>BRAVE INDUSTRIES LLC</td>
+            <td>KLEINDL'S SUNSET RENTALS LLC</td>
+            <td>W594 State Road 23 49</td>
+            <td>120000</td>
+          </tr>
+          <tr>
+            <th scope="row">71</th>
+            <td>LANGLADE</td>
+            <td>NEVA</td>
+            <td>JAMES HONZIK</td>
+            <td>MARK AND CONSTANCE ROSIO</td>
+            <td>N5602 County Rd E</td>
+            <td>28000</td>
+          </tr>
+          <tr>
+            <th scope="row">72</th>
+            <td>MARINETTE</td>
+            <td>MARINETTE</td>
+            <td>JAMES AND BARBARA MORRISON JT TRUST</td>
+            <td>HARVEY PARVEY LLC</td>
+            <td>2042 Maple Ave</td>
+            <td>168000</td>
+          </tr>
+          <tr>
+            <th scope="row">73</th>
+            <td>FOND DU LAC</td>
+            <td>FOND DU LAC</td>
+            <td>DAVID J HORNUNG</td>
+            <td>MICHAEL H DEBAERE</td>
+            <td>723 S Main St</td>
+            <td>250000</td>
+          </tr>
+          <tr>
+            <th scope="row">74</th>
+            <td>OCONTO</td>
+            <td>OCONTO</td>
+            <td>GANNETT SATELLITE INFORMATION NETWORK LLC</td>
+            <td>OCONTO ASSEMBLY OF GOD</td>
+            <td>648 Brazeau Ave</td>
+            <td>100000</td>
+          </tr>
+          <tr>
+            <th scope="row">75</th>
+            <td>MARINETTE</td>
+            <td>PESHTIGO</td>
+            <td>PESHTIGO FITNESS CENTER LLC</td>
+            <td>NAH UXIBAL LLC</td>
+            <td>120 Ogden Rd</td>
+            <td>186400</td>
+          </tr>
+          <tr>
+            <th scope="row">76</th>
+            <td>MARINETTE</td>
+            <td>MARINETTE</td>
+            <td>DANIEL AND KATHLEEN MENOR</td>
+            <td>POLZIN PROPERTY MANAGEMENT LLC</td>
+            <td>3600 Parsek St</td>
+            <td>100000</td>
+          </tr>
+          <tr>
+            <th scope="row">77</th>
+            <td>OUTAGAMIE</td>
+            <td>LITTLE CHUTE</td>
+            <td>RYETT PROPERTIES LLC</td>
+            <td>KLINK PROERTIES LLC</td>
+            <td>520 Randolph Dr</td>
+            <td>400000</td>
+          </tr>
+          <tr>
+            <th scope="row">78</th>
+            <td>WINNEBAGO</td>
+            <td>NEENAH</td>
+            <td>P&D INVESTMENT PROPERTIES LLC</td>
+            <td>HAWLEY LLC</td>
+            <td>851 Cty Rd G</td>
+            <td>415000</td>
+          </tr>
+          <tr>
+            <th scope="row">79</th>
+            <td>MARINETTE</td>
+            <td>MARINETTE</td>
+            <td>WDM ENTERPRISES INC</td>
+            <td>JRV PROPERTIES LLC</td>
+            <td>2515 Cleveland Ave</td>
+            <td>350000</td>
+          </tr>
+          <tr>
+            <th scope="row">80</th>
+            <td>OCONTO</td>
+            <td>MAPLE VALLEY</td>
+            <td>DEWITT INVESTMENTS LLC</td>
+            <td>STUYVENBERG PROPERTIES LLC</td>
+            <td>8888 County Road V</td>
+            <td>229500</td>
+          </tr>
+          <tr>
+            <th scope="row">81</th>
+            <td>WAUPACA</td>
+            <td>WAUPACA</td>
+            <td>DELICIOUS POPCORN & DISTRIBUTORS CO INC</td>
+            <td>REAL ESTATE MANAGERS LLC</td>
+            <td>300 De Lish Us Ave</td>
+            <td>170000</td>
+          </tr>
+          <tr>
+            <th scope="row">82</th>
+            <td>BROWN</td>
+            <td>GREEN BAY</td>
+            <td>ROBERT HAMMER & CATHERINE HAMMER TRST</td>
+            <td>BAY AREA COMMERCIAL DEVELOPMENTLLC</td>
+            <td>724 Day St</td>
+            <td>490000</td>
+          </tr>
+          <tr>
+            <th scope="row">83</th>
+            <td>BROWN</td>
+            <td>DE PERE</td>
+            <td>F&O PARTNERSHIP LLP</td>
+            <td>R&G LLC</td>
+            <td>715 N 8th St</td>
+            <td>950000</td>
+          </tr>
+          <tr>
+            <th scope="row">84</th>
+            <td>SHEBOYGAN</td>
+            <td>PLYMOUTH</td>
+            <td>LAKELAND SPORTS CENTER INC</td>
+            <td>SUMMER OF 2019 LLC</td>
+            <td>1663 Pilgrim Rd</td>
+            <td>900000</td>
+          </tr>
+          <tr>
+            <th scope="row">85</th>
+            <td>OUTAGAMIE</td>
+            <td>GRAND CHUTE</td>
+            <td>NEIL NOVAK REALTY LLC</td>
+            <td>JBS SERVICES LLC</td>
+            <td>920 N Bluemiund Dr</td>
+            <td>1750000</td>
+          </tr>
+          <tr>
+            <th scope="row">86</th>
+            <td>MARINETTE</td>
+            <td>MARINETTE</td>
+            <td>BEAUTY SYSTEMS GROUP LLC</td>
+            <td>K & KW LLC</td>
+            <td>2300 Aerial Dr</td>
+            <td>3250000</td>
+          </tr>
+          <tr>
+            <th scope="row">87</th>
+            <td>OUTAGAMIE</td>
+            <td>APPLETON</td>
+            <td>GANNETT SATELLITE INFORMATION NETWORK</td>
+            <td>ATI LADISH LLC</td>
+            <td>3500 N Executive Dr</td>
+            <td>3400000</td>
+          </tr>
+          <tr>
+            <th scope="row">88</th>
+            <td>WINNEBAGO</td>
+            <td>OSHKOSH</td>
+            <td>H&M COMMERCIAL LLC</td>
+            <td>MVT LLC</td>
+            <td>1871 Stillman Dr</td>
+            <td>3200000</td>
+          </tr>
+          <tr>
+            <th scope="row">89</th>
+            <td>SHEBOYGAN</td>
+            <td>SHEBOYGAN</td>
+            <td>OFFICE SERVICE COMPANY LLP</td>
+            <td>TORGINOL INC</td>
+            <td>4350 Tower Dr</td>
+            <td>4581400</td>
+          </tr>
+          <tr>
+            <th scope="row">90</th>
+            <td>FOND DU LAC</td>
+            <td>RIPON</td>
+            <td>SPARTECH LLC</td>
+            <td>ROGERS & ROGERS INC</td>
+            <td>100 Creative Way</td>
+            <td>2600000</td>
+          </tr>
+          <tr>
+            <th scope="row">91</th>
+            <td>DANE</td>
+            <td>OREGON</td>
+            <td>REINDAHL STONE INC</td>
+            <td>MANDT SANDFILL TRUCKING & EXCVATING LLC</td>
+            <td>783 Hwy Mm</td>
+            <td>765000</td>
+          </tr>
+          <tr>
+            <th scope="row">92</th>
+            <td>DANE</td>
+            <td>BLACK EARTH</td>
+            <td>DAVID E AND SUSAN VONDRA</td>
+            <td>FERRIE & ASSOCIATES LLC</td>
+            <td>1111 Mills St</td>
+            <td>180900</td>
+          </tr>
+          <tr>
+            <th scope="row">93</th>
+            <td>WALWORTH</td>
+            <td>WHITEWATER</td>
+            <td>MARCUSSEN TOOL & DIE INC</td>
+            <td>M2K2 LLC</td>
+            <td>1227 Universal Blvd</td>
+            <td>345000</td>
+          </tr>
+          <tr>
+            <th scope="row">94</th>
+            <td>WALWORTH</td>
+            <td>DELAVAN</td>
+            <td>FIELDVIEW LLC</td>
+            <td>PURNELL ENTERPRISES LLC</td>
+            <td>309 Wright St</td>
+            <td>370000</td>
+          </tr>
+          <tr>
+            <th scope="row">95</th>
+            <td>DANE</td>
+            <td>STOUGHTON</td>
+            <td>GENE A AND DEBRA J WHITFORD</td>
+            <td>KTW PROPERTY MANAGEMENT LLC</td>
+            <td>540 Business Park Cir</td>
+            <td>400000</td>
+          </tr>
+          <tr>
+            <th scope="row">96</th>
+            <td>ROCK</td>
+            <td>BELOIT</td>
+            <td>LS REAL ESTATE OF BELOIT LLC</td>
+            <td>CALIBER INVESTMENTS LLC</td>
+            <td>4065 S Riverside Dr</td>
+            <td>395000</td>
+          </tr>
+          <tr>
+            <th scope="row">97</th>
+            <td>WALWORTH</td>
+            <td>LYONS</td>
+            <td>STIER RENTALS LLC</td>
+            <td>MADAUS PROPERTIES LLC</td>
+            <td>7214 Madaus St</td>
+            <td>694000</td>
+          </tr>
+          <tr>
+            <th scope="row">98</th>
+            <td>WAUKESHA</td>
+            <td>HARTLAND</td>
+            <td>SCI INVESTMENT HOLDINGS LLC</td>
+            <td>P&J PROGRESS LLC</td>
+            <td>540 Progress Dr</td>
+            <td>980000</td>
+          </tr>
+          <tr>
+            <th scope="row">99</th>
+            <td>JEFFERSON</td>
+            <td>LAKE MILLS</td>
+            <td>SGJA LLC</td>
+            <td>FIRE SERVICE HOLDING LLC</td>
+            <td>105 Industrial Dr</td>
+            <td>925000</td>
+          </tr>
+          <tr>
+            <th scope="row">100</th>
+            <td>JEFFERSON</td>
+            <td>SULLIVAN</td>
+            <td>RSM HOLDINGS LLC</td>
+            <td>SULLIVAN INDUSTRIAL LLC</td>
+            <td>200 A Main St</td>
+            <td>932500</td>
+          </tr>
+          <tr>
+            <th scope="row">101</th>
+            <td>WALWORTH</td>
+            <td>DELAVAN</td>
+            <td>DEHAAN ENTERPRISES LLC</td>
+            <td>PURNELL ENTERPRISES LLC</td>
+            <td>1827 Hobbs Dr</td>
+            <td>1600000</td>
+          </tr>
+          <tr>
+            <th scope="row">102</th>
+            <td>DANE</td>
+            <td>MADISON</td>
+            <td>FAUST VENTURES LLC</td>
+            <td>PAC PROPERTIES LLC</td>
+            <td>1002 Stewart St</td>
+            <td>1490000</td>
+          </tr>
+          <tr>
+            <th scope="row">103</th>
+            <td>DODGE</td>
+            <td>LOMIRA</td>
+            <td>GREY GRANITE REALTY INVESTMENTS LLC</td>
+            <td>ROBERT SHAW REALTY LLC</td>
+            <td>309 S Water St</td>
+            <td>750000</td>
+          </tr>
+          <tr>
+            <th scope="row">104</th>
+            <td>GREEN</td>
+            <td>MONROE</td>
+            <td>IVEY CORPORATION</td>
+            <td>MONROE TRUCK EQUIPMENT INC</td>
+            <td>628 W 10 1/2 St</td>
+            <td>1375000</td>
+          </tr>
+          <tr>
+            <th scope="row">105</th>
+            <td>ROCK</td>
+            <td>JANESVILLE</td>
+            <td>D&W PROPERTIES</td>
+            <td>BRANDT PROPERTIES I LLC</td>
+            <td>4120 Capital Cir</td>
+            <td>2000000</td>
+          </tr>
+          <tr>
+            <th scope="row">106</th>
+            <td>DANE</td>
+            <td>VERONA</td>
+            <td>UNITED VACCINES INC</td>
+            <td>BIOMUNE COMPANY</td>
+            <td>1131 Thousand Oaks Trl</td>
+            <td>6444800</td>
+          </tr>
+          <tr>
+            <th scope="row">107</th>
+            <td>DANE</td>
+            <td>DEERFIELD</td>
+            <td>MPI PRODUCTS DEERFIELD WISCONSIN LLC</td>
+            <td>MPI ENGINEERED TECHNOLOGIES WIN LLC</td>
+            <td>54 Golf Rd</td>
+            <td>880000</td>
+          </tr>
+          <tr>
+            <th scope="row">108</th>
+            <td>ROCK</td>
+            <td>TURTLE</td>
+            <td>REGAL BELOIT CORPORATION</td>
+            <td>LEAP REALTY LLC</td>
+            <td>5560 E Buss Rd</td>
+            <td>1500000</td>
+          </tr>
+          <tr>
+            <th scope="row">109</th>
+            <td>RICHLAND</td>
+            <td>RICHLAND CENTER</td>
+            <td>FIRST INDUSTRIAL LP</td>
+            <td>PRAN RICHLAND LLC</td>
+            <td>1500 Peebles Dr</td>
+            <td>3425000</td>
+          </tr>
+          <tr>
+            <th scope="row">110</th>
+            <td>ROCK</td>
+            <td>JANESVILLE</td>
+            <td>BORDEN FAMILY HOLDINGS IIILLC</td>
+            <td>PARTITION PROPERTY LLC</td>
+            <td>2101 Kennedy Rd</td>
+            <td>6650000</td>
+          </tr>
+          <tr>
+            <th scope="row">111</th>
+            <td>MILWAUKEE</td>
+            <td>MILWAUKEE</td>
+            <td>JANET L DOYEN</td>
+            <td>DYNAMIC ENTERPRIZES LLC</td>
+            <td>8634 W Kaul Ave</td>
+            <td>160000</td>
+          </tr>
+          <tr>
+            <th scope="row">112</th>
+            <td>RACINE</td>
+            <td>RACINE</td>
+            <td>MARION GAGNON PROPERTIES LLC</td>
+            <td>GLENFAIR LLC</td>
+            <td>1433 Junction Ave</td>
+            <td>140000</td>
+          </tr>
+          <tr>
+            <th scope="row">113</th>
+            <td>WAUKESHA</td>
+            <td>MUSKEGO</td>
+            <td>DOME PROPERTIES LLC</td>
+            <td>CENS LLC</td>
+            <td>S84 W18759 Enterprise Dr</td>
+            <td>600000</td>
+          </tr>
+          <tr>
+            <th scope="row">114</th>
+            <td>WASHINGTON</td>
+            <td>GERMANTOWN</td>
+            <td>MURRAY INVESTMENTS LLC</td>
+            <td>KLD PROPERTIES LLC</td>
+            <td>N116 W18455 Morse Dr</td>
+            <td>810000</td>
+          </tr>
+          <tr>
+            <th scope="row">115</th>
+            <td>KENOSHA</td>
+            <td>BRISTOL</td>
+            <td>SCOTT THUROW TRUST DATED MAY 82007</td>
+            <td>8671 LLC</td>
+            <td>8671 198th Ave</td>
+            <td>400000</td>
+          </tr>
+          <tr>
+            <th scope="row">116</th>
+            <td>WAUKESHA</td>
+            <td>BROOKFIELD</td>
+            <td>N & B REAL ESTATE PARTNERSHIP</td>
+            <td>TPGW LLC A WISCONSIN LIMITED LIABILITY COMPANY</td>
+            <td>3365 Gateway Rd</td>
+            <td>930000</td>
+          </tr>
+          <tr>
+            <th scope="row">117</th>
+            <td>WAUKESHA</td>
+            <td>NEW BERLIN</td>
+            <td>AMM ENTERPRISES LLC</td>
+            <td>JLO LLC</td>
+            <td>16055 W Ryerson Rd</td>
+            <td>875000</td>
+          </tr>
+          <tr>
+            <th scope="row">118</th>
+            <td>MILWAUKEE</td>
+            <td>MILWAUKEE</td>
+            <td>3825 LLC</td>
+            <td>3825 W MILL ROAD LLC</td>
+            <td>3825 W Mill Rd</td>
+            <td>281500</td>
+          </tr>
+          <tr>
+            <th scope="row">119</th>
+            <td>MILWAUKEE</td>
+            <td>MILWAUKEE</td>
+            <td>BRUSCHI USA INC</td>
+            <td>WESSEL PROPERTIES LLC</td>
+            <td>8050 N Granville Woods Rd</td>
+            <td>1400000</td>
+          </tr>
+          <tr>
+            <th scope="row">120</th>
+            <td>WAUKESHA</td>
+            <td>BROOKFIELD</td>
+            <td>GERALD R LOEBEL REVOCABLE TRUST DTD 3/24/16</td>
+            <td>UDOL INVESTMENTS LLC</td>
+            <td>3313 N 124th St</td>
+            <td>790000</td>
+          </tr>
+          <tr>
+            <th scope="row">121</th>
+            <td>WAUKESHA</td>
+            <td>BROOKFIELD</td>
+            <td>DANIEL R ANTRIM TRUST U/A DTD 4/19/89</td>
+            <td>GNR 3530 PROPERTY LLC</td>
+            <td>3530 N 127th St</td>
+            <td>975000</td>
+          </tr>
+          <tr>
+            <th scope="row">122</th>
+            <td>WAUKESHA</td>
+            <td>MENOMONEE FALLS</td>
+            <td>IGM ROBOTIC SYSTEMS INC</td>
+            <td>C & D REAL ESTATE HOLDINGS LLC</td>
+            <td>W133 N5138 Campbell Dr</td>
+            <td>1600000</td>
+          </tr>
+          <tr>
+            <th scope="row">123</th>
+            <td>MILWAUKEE</td>
+            <td>GREENDALE</td>
+            <td>SUPERIOR DIE SET CORP</td>
+            <td>NOR INVESTMENTS</td>
+            <td>6755 Industrial Lp</td>
+            <td>1050000</td>
+          </tr>
+          <tr>
+            <th scope="row">124</th>
+            <td>MILWAUKEE</td>
+            <td>MILWAUKEE</td>
+            <td>ROCKWELL AUTOMATION INC</td>
+            <td>REPUBLIC HOLDINGS LLC</td>
+            <td>123 - 133 E Walker St</td>
+            <td>1200000</td>
+          </tr>
+          <tr>
+            <th scope="row">125</th>
+            <td>WAUKESHA</td>
+            <td>NEW BERLIN</td>
+            <td>C&S REAL ESTATE HOLDINGS LLC</td>
+            <td>CORE LINCOLN 16211 LLC</td>
+            <td>16211 W Lincoln Ave</td>
+            <td>1850000</td>
+          </tr>
+          <tr>
+            <th scope="row">126</th>
+            <td>KENOSHA</td>
+            <td>KENOSHA</td>
+            <td>PAD LLC</td>
+            <td>CENT FINANCING LLC</td>
+            <td>9606 58th Pl</td>
+            <td>1950000</td>
+          </tr>
+          <tr>
+            <th scope="row">127</th>
+            <td>WAUKESHA</td>
+            <td>NEW BERLIN</td>
+            <td>SUPER PRODUCTS LLC</td>
+            <td>LANDRY CLEVELAND REAL ESTATE LLC</td>
+            <td>17000 W Cleveland Ave</td>
+            <td>2250000</td>
+          </tr>
+          <tr>
+            <th scope="row">128</th>
+            <td>KENOSHA</td>
+            <td>PLEASANT PRAIRIE</td>
+            <td>COLERGET GROUP LP</td>
+            <td>TRIDENT PROPERTY INVESTMENT LLC C/O TWD TRADEWINDSINC.</td>
+            <td>10555 86th Ave</td>
+            <td>2730000</td>
+          </tr>
+          <tr>
+            <th scope="row">129</th>
+            <td>RACINE</td>
+            <td>RACINE</td>
+            <td>MDS INVESTMENTSLLC</td>
+            <td>MKB OF RACINELLC</td>
+            <td>2201 South St</td>
+            <td>2696975</td>
+          </tr>
+          <tr>
+            <th scope="row">130</th>
+            <td>RACINE</td>
+            <td>RACINE</td>
+            <td>LEE ENTERPRISES INC</td>
+            <td>JOHN KURTZ LLC</td>
+            <td>212 4th St</td>
+            <td>899000</td>
+          </tr>
+          <tr>
+            <th scope="row">131</th>
+            <td>MILWAUKEE</td>
+            <td>MILWAUKEE</td>
+            <td>11225 HEATHER LLC</td>
+            <td>REBEL REALTY LLC</td>
+            <td>11225 W Heather Av Ave</td>
+            <td>4770000</td>
+          </tr>
+          <tr>
+            <th scope="row">132</th>
+            <td>WAUKESHA</td>
+            <td>MENOMONEE FALLS</td>
+            <td>BAMCO INVESTMENTS LLP</td>
+            <td>CALJAN INC</td>
+            <td>W140 N9000 Lilly Rd</td>
+            <td>5375000</td>
+          </tr>
+          <tr>
+            <th scope="row">133</th>
+            <td>BARRON</td>
+            <td>RICE LAKE</td>
+            <td>TYST LLC</td>
+            <td>ROB AND CELINA AVERY</td>
+            <td>2088 18 3/4 St</td>
+            <td>300000</td>
+          </tr>
+          <tr>
+            <th scope="row">134</th>
+            <td>BUFFALO</td>
+            <td>MILTON</td>
+            <td>ROBERT E DOTTERWICK</td>
+            <td>RICHARD R HALVERSON</td>
+            <td>S2984 Indian Creek Rd</td>
+            <td>350000</td>
+          </tr>
+          <tr>
+            <th scope="row">135</th>
+            <td>MONROE</td>
+            <td>TOMAH</td>
+            <td>JOSEPH AND LINDA BUBNICH</td>
+            <td>CRETESTONE PROPERTIES LLC</td>
+            <td>935 N Superior Ave</td>
+            <td>500000</td>
+          </tr>
+          <tr>
+            <th scope="row">136</th>
+            <td>BARRON</td>
+            <td>RICE LAKE</td>
+            <td>THOMAS AND CHRISTINE CLEMENTS</td>
+            <td>TYST LLC</td>
+            <td>2081 18 3/4 St</td>
+            <td>291030</td>
+          </tr>
+          <tr>
+            <th scope="row">137</th>
+            <td>DUNN</td>
+            <td>KNAPP</td>
+            <td>VETS PLUS INC</td>
+            <td>G & G SMITHLLP</td>
+            <td>102 E 3rd Ave</td>
+            <td>230000</td>
+          </tr>
+          <tr>
+            <th scope="row">138</th>
+            <td>DUNN</td>
+            <td>MENOMONIE</td>
+            <td>LEWIS FAMILY LLC</td>
+            <td>MIDWEST LIVESTOCK SYSTEMS</td>
+            <td>1714 Freitag Dr</td>
+            <td>600000</td>
+          </tr>
+          <tr>
+            <th scope="row">139</th>
+            <td>WOOD</td>
+            <td>WISCONSIN RAPIDS</td>
+            <td>THE FERMATA COMPANY LLP</td>
+            <td>MICHAEL J. SPRANGER AND DAWN M. SPRANGER REVOCABLE TRUST</td>
+            <td>3211 Industrial St</td>
+            <td>476500</td>
+          </tr>
+          <tr>
+            <th scope="row">140</th>
+            <td>JACKSON</td>
+            <td>ADAMS</td>
+            <td>MARK A & LISA A MUTH</td>
+            <td>NVS BRF PROPERTIES LLC</td>
+            <td>N6630 County Rd A</td>
+            <td>900000</td>
+          </tr>
+          <tr>
+            <th scope="row">141</th>
+            <td>WOOD</td>
+            <td>SARATOGA</td>
+            <td>WISCONSIN FLOWGATE & CULVERT CO.INC</td>
+            <td>WFC PROPERTIESLLC</td>
+            <td>925 State Highway 73</td>
+            <td>453000</td>
+          </tr>
+          <tr>
+            <th scope="row">142</th>
+            <td>CHIPPEWA</td>
+            <td>BLOOMER</td>
+            <td>APPLEGATE WISCONSIN LLC</td>
+            <td>MARIK PROPERTIES LLC</td>
+            <td>600 Industrial Blvd</td>
+            <td>450000</td>
+          </tr>
+          <tr>
+            <th scope="row">143</th>
+            <td>DUNN</td>
+            <td>KNAPP</td>
+            <td>VETS PLUS LLC</td>
+            <td>K & S JACK ENTERPRISES LLC</td>
+            <td>115 South St</td>
+            <td>475000</td>
+          </tr>
+          <tr>
+            <th scope="row">144</th>
+            <td>WOOD</td>
+            <td>MARSHFIELD</td>
+            <td>CAMBRIAN PRODUCTS LLC</td>
+            <td>MARSHFIELD LAND HOLDINGSLLC</td>
+            <td>2609 E 4th St</td>
+            <td>679000</td>
+          </tr>
+          <tr>
+            <th scope="row">145</th>
+            <td>WOOD</td>
+            <td>MARSHFIELD</td>
+            <td>AB REAL ESTATELLC</td>
+            <td>COUNTER-FORM LLC</td>
+            <td>1915 E 29th St</td>
+            <td>925000</td>
+          </tr>
+          <tr>
+            <th scope="row">146</th>
+            <td>ST CROIX</td>
+            <td>RIVER FALLS</td>
+            <td>FURHL LLC</td>
+            <td>INTERFACIAL HOLDINGS LLC</td>
+            <td>393 Troy St</td>
+            <td>3580000</td>
+          </tr>
+          <tr>
+            <th scope="row">147</th>
+            <td>EAU CLAIRE</td>
+            <td>EAU CLAIRE</td>
+            <td>SVCN 1 LLC</td>
+            <td>CONTINENTAL 1776 LLC</td>
+            <td>2921 Mall Dr</td>
+            <td>2600000</td>
+          </tr>
+          <tr>
+            <th scope="row">148</th>
+            <td>CALUMET</td>
+            <td>WOODVILLE</td>
+            <td>IRON WORKERS 8 APPRENTICESHIP AND TRAINING FUND</td>
+            <td>NICHOLAS A. ECKES</td>
+            <td>N9115 County D</td>
+            <td>60000</td>
+          </tr>
+          <tr>
+            <th scope="row">149</th>
+            <td>OCONTO</td>
+            <td>MOUNTAIN</td>
+            <td>DAVID YOKEUM</td>
+            <td>TNT CONSTRUCTION LLC</td>
+            <td>13945 State Hwy 32 64</td>
+            <td>58000</td>
+          </tr>
+          <tr>
+            <th scope="row">150</th>
+            <td>MARINETTE</td>
+            <td>CRIVITZ</td>
+            <td>FALLING WATERS WINERY LLC</td>
+            <td>EVENLYS RENTAL LLC</td>
+            <td>721 Dyer St</td>
+            <td>198000</td>
+          </tr>
+          <tr>
+            <th scope="row">151</th>
+            <td>FOND DU LAC</td>
+            <td>FOND DU LAC</td>
+            <td>REMINISCENCE BY RITA LLC</td>
+            <td>PRIESSNITZ PROPERTIES LLC</td>
+            <td>123 S Main St</td>
+            <td>96500</td>
+          </tr>
+          <tr>
+            <th scope="row">152</th>
+            <td>SHAWANO</td>
+            <td>SHAWANO</td>
+            <td>MICHAEL GROTH</td>
+            <td>HAI ALPINE LLC</td>
+            <td>121 Alpine Dr</td>
+            <td>169000</td>
+          </tr>
+          <tr>
+            <th scope="row">153</th>
+            <td>DOOR</td>
+            <td>NASEWAUPEE</td>
+            <td>ROSY'S TIRE AND AUTOMOTIVE SERVICELLC</td>
+            <td>DELSART EXCAVATING LLC</td>
+            <td>6721 State Hwy 42/57</td>
+            <td>185000</td>
+          </tr>
+          <tr>
+            <th scope="row">154</th>
+            <td>WINNEBAGO</td>
+            <td>NEENAH</td>
+            <td>DAVID DANIELS</td>
+            <td>ELITE VENTURE LLC</td>
+            <td>1072 Rock Ledge Ln</td>
+            <td>260000</td>
+          </tr>
+          <tr>
+            <th scope="row">155</th>
+            <td>OUTAGAMIE</td>
+            <td>APPLETON</td>
+            <td>KAK INVESTMENTS</td>
+            <td>ACTION INDUSTRY LLC</td>
+            <td>2315 W Everett St</td>
+            <td>230000</td>
+          </tr>
+          <tr>
+            <th scope="row">156</th>
+            <td>WINNEBAGO</td>
+            <td>NEENAH</td>
+            <td>PTA PROPERTIES INK F/K/A PRINTED TAPE ASSOCIATES INC</td>
+            <td>510 DISCOVERY LLC</td>
+            <td>510 Discovery Dr</td>
+            <td>229500</td>
+          </tr>
+          <tr>
+            <th scope="row">157</th>
+            <td>LANGLADE</td>
+            <td>ANTIGO</td>
+            <td>STIBBE EXCAVATING AND GRADING INC</td>
+            <td>SCHUMITSCH REVOCABLE TRUST</td>
+            <td>617 Wausau Rd</td>
+            <td>130000</td>
+          </tr>
+          <tr>
+            <th scope="row">158</th>
+            <td>WAUSHARA</td>
+            <td>BERLIN</td>
+            <td>DANIEL BOHN</td>
+            <td>HIBBERT PROPERTIES LLC</td>
+            <td>396 Ripon Rd</td>
+            <td>145000</td>
+          </tr>
+          <tr>
+            <th scope="row">159</th>
+            <td>DOOR</td>
+            <td>STURGEON BAY</td>
+            <td>YOUNG REAL ESTATELLC</td>
+            <td>FYSY120LLC</td>
+            <td>120 N 14th Ave</td>
+            <td>231000</td>
+          </tr>
+          <tr>
+            <th scope="row">160</th>
+            <td>SHAWANO</td>
+            <td>SHAWANO</td>
+            <td>KRUEGER & LUECK UPHOLSTERY</td>
+            <td>PORDNUS 3 LLC</td>
+            <td>701 S Main St</td>
+            <td>250000</td>
+          </tr>
+          <tr>
+            <th scope="row">161</th>
+            <td>BROWN</td>
+            <td>DE PERE</td>
+            <td>G & T MILLENNIUM PROPERTY LLC</td>
+            <td>V2 INVESTMENTS LLC</td>
+            <td>759 Millennium Ct</td>
+            <td>650000</td>
+          </tr>
+          <tr>
+            <th scope="row">162</th>
+            <td>LANGLADE</td>
+            <td>ANTIGO</td>
+            <td>WEST-MCNEIL RE PARTNERSHIP</td>
+            <td>HP PROPERTY MANAGEMENT LLC</td>
+            <td>W9630 Highway 64</td>
+            <td>285000</td>
+          </tr>
+          <tr>
+            <th scope="row">163</th>
+            <td>BROWN</td>
+            <td>ASHWAUBENON</td>
+            <td>COLORTECH REAL ESTATE LLC</td>
+            <td>STEPHANO PROPERTIES LLC</td>
+            <td>1021 Ashwaubenon St</td>
+            <td>620000</td>
+          </tr>
+          <tr>
+            <th scope="row">164</th>
+            <td>SHAWANO</td>
+            <td>WITTENBERG</td>
+            <td>CENTRAL WISCONSIN ELECTRIC COOPERATIVE</td>
+            <td>NUESKE PROPERTIES LLC</td>
+            <td>1790 Applewood Ln</td>
+            <td>420000</td>
+          </tr>
+          <tr>
+            <th scope="row">165</th>
+            <td>OUTAGAMIE</td>
+            <td>GRAND CHUTE</td>
+            <td>P & B INVESTMENTS LLC</td>
+            <td>ALC PROPERTIES LLC</td>
+            <td>2135 W Nordale Dr</td>
+            <td>430000</td>
+          </tr>
+          <tr>
+            <th scope="row">166</th>
+            <td>OUTAGAMIE</td>
+            <td>DALE</td>
+            <td>BRUMAR INVESTMENTS LLC</td>
+            <td>ASW PROPERTIES LLC</td>
+            <td>N909 Midway Rd</td>
+            <td>390000</td>
+          </tr>
+          <tr>
+            <th scope="row">167</th>
+            <td>WINNEBAGO</td>
+            <td>NEENAH</td>
+            <td>NEENAH GILLINGHAM PROPERTIES LLC</td>
+            <td>LB5 INVESTMENTS LLC</td>
+            <td>1320 Gillingham Rd</td>
+            <td>615000</td>
+          </tr>
+          <tr>
+            <th scope="row">168</th>
+            <td>SHEBOYGAN</td>
+            <td>SHEBOYGAN</td>
+            <td>HORWITZ ENTERPRISES INC FKA GENERAL MACHINERY CORPORATION</td>
+            <td>ROYAL HEATING & AIR LLC</td>
+            <td>1831 N 18th St</td>
+            <td>250000</td>
+          </tr>
+          <tr>
+            <th scope="row">169</th>
+            <td>OUTAGAMIE</td>
+            <td>FREEDOM</td>
+            <td>MADDEN MACHINE CORP</td>
+            <td>KUSKE PROPERTIES LLC</td>
+            <td>N3888 Hwy 55</td>
+            <td>125000</td>
+          </tr>
+          <tr>
+            <th scope="row">170</th>
+            <td>MARINETTE</td>
+            <td>MARINETTE</td>
+            <td>JP COMMERCIAL PROPERTIES LLC</td>
+            <td>MARINETTE HALL PROPERTY LLC</td>
+            <td>3210 Hall Ave</td>
+            <td>272000</td>
+          </tr>
+          <tr>
+            <th scope="row">171</th>
+            <td>KEWAUNEE</td>
+            <td>ALGOMA</td>
+            <td>DANIEL G. NESBITT</td>
+            <td>SCHMILINGVISIONLLP</td>
+            <td>2025 Lake St</td>
+            <td>375000</td>
+          </tr>
+          <tr>
+            <th scope="row">172</th>
+            <td>WINNEBAGO</td>
+            <td>NEENAH</td>
+            <td>KIMBERLY-CLARK CORPORATION</td>
+            <td>BERGSTROM PROPERTIES INC</td>
+            <td>544 Jensen Rd</td>
+            <td>1100000</td>
+          </tr>
+          <tr>
+            <th scope="row">173</th>
+            <td>OUTAGAMIE</td>
+            <td>GREENVILLE</td>
+            <td>HDB HOLDINGS LLC</td>
+            <td>IVI INVESTMENTS LLC</td>
+            <td>N1001 Tower View Dr</td>
+            <td>755000</td>
+          </tr>
+          <tr>
+            <th scope="row">174</th>
+            <td>BROWN</td>
+            <td>ASHWAUBENON</td>
+            <td>MJ AXIS PROPERTIES LLC</td>
+            <td>AXIS REAL ESTATE LLC</td>
+            <td>977 Ashwaubenon St</td>
+            <td>463100</td>
+          </tr>
+          <tr>
+            <th scope="row">175</th>
+            <td>OUTAGAMIE</td>
+            <td>GREENVILLE</td>
+            <td>QUALITY DRIVELLCA WISCONSIN LLC</td>
+            <td>N.E.W. QUALITY PROPERTIES LLC</td>
+            <td>N992 Quality Dr</td>
+            <td>1500000</td>
+          </tr>
+          <tr>
+            <th scope="row">176</th>
+            <td>BROWN</td>
+            <td>GREEN BAY</td>
+            <td>CHRISTENSEN III INVESTMENTS LLC</td>
+            <td>GREEN BAY DRESSED BEEFLLC</td>
+            <td>536 Elizabeth St</td>
+            <td>515000</td>
+          </tr>
+          <tr>
+            <th scope="row">177</th>
+            <td>OUTAGAMIE</td>
+            <td>APPLETON</td>
+            <td>TRITT & SALISBURY PROPERTIES LLC</td>
+            <td>CITY OF APPLETON A WISCONSIN MUNICAPAL CORPORATION</td>
+            <td>3001 E Glendale Ave</td>
+            <td>455000</td>
+          </tr>
+          <tr>
+            <th scope="row">178</th>
+            <td>FOND DU LAC</td>
+            <td>FOND DU LAC</td>
+            <td>HINTZ RENTAL LIMITED PARTNERSHIP</td>
+            <td>PERL RENTALS</td>
+            <td>575 Fond Du Lac Ave</td>
+            <td>645000</td>
+          </tr>
+          <tr>
+            <th scope="row">179</th>
+            <td>OCONTO</td>
+            <td>OCONTO FALLS</td>
+            <td>WILLIAM AND CAROL GRINER</td>
+            <td>ALLEN CHARLES AND VICKY GRAETZ</td>
+            <td>206 E Highland Dr</td>
+            <td>325000</td>
+          </tr>
+          <tr>
+            <th scope="row">180</th>
+            <td>OUTAGAMIE</td>
+            <td>GREENVILLE</td>
+            <td>GREENVILLE PROPERTY INVESTMENTSLLC</td>
+            <td>BURNS & MCDONNELL PROJECT INVESTMENTSINC.</td>
+            <td>N1009 Quality Dr</td>
+            <td>1596000</td>
+          </tr>
+          <tr>
+            <th scope="row">181</th>
+            <td>BROWN</td>
+            <td>BELLEVUE</td>
+            <td>MCC-WISCONSIN LLC</td>
+            <td>ALLIANCE LAND HOLDINGS LLC</td>
+            <td>1836 Sal St</td>
+            <td>995000</td>
+          </tr>
+          <tr>
+            <th scope="row">182</th>
+            <td>MARINETTE</td>
+            <td>MARINETTE</td>
+            <td>BBSSP INVESTMENTS LLC</td>
+            <td>HURCKMAN MECHANICAL INDUSTRIES INC</td>
+            <td>301 Russell St</td>
+            <td>500000</td>
+          </tr>
+          <tr>
+            <th scope="row">183</th>
+            <td>BROWN</td>
+            <td>PULASKI</td>
+            <td>MARQUIS YACHTS LLC</td>
+            <td>BRIERWOOD PROPERTIES LLC</td>
+            <td>517 E Cedar St</td>
+            <td>610000</td>
+          </tr>
+          <tr>
+            <th scope="row">184</th>
+            <td>BROWN</td>
+            <td>PULASKI</td>
+            <td>MARQUIS YACHTS LLC</td>
+            <td>BRIERWOOD PROPERTIES LLC</td>
+            <td>308 S Wisconsin St</td>
+            <td>300000</td>
+          </tr>
+          <tr>
+            <th scope="row">185</th>
+            <td>WINNEBAGO</td>
+            <td>OSHKOSH</td>
+            <td>ATLAS CAPITAL RELLC</td>
+            <td>BLANCK ENTERPRISE LLC</td>
+            <td>2676 S Oakwood Rd</td>
+            <td>4250000</td>
+          </tr>
+          <tr>
+            <th scope="row">186</th>
+            <td>FOND DU LAC</td>
+            <td>FOND DU LAC</td>
+            <td>THE COMBINATION DOOR CO.</td>
+            <td>MPI MORRIS LLC</td>
+            <td>1000 Morris St</td>
+            <td>1750000</td>
+          </tr>
+          <tr>
+            <th scope="row">187</th>
+            <td>OUTAGAMIE</td>
+            <td>APPLETON</td>
+            <td>GFP OUTAGAMIE LLC</td>
+            <td>C3 REAL ESTATE HOLDINGS LLC</td>
+            <td>3120 N Marshall Rd</td>
+            <td>4300000</td>
+          </tr>
+          <tr>
+            <th scope="row">188</th>
+            <td>WINNEBAGO</td>
+            <td>NEENAH</td>
+            <td>KIMBERLY CLARK</td>
+            <td>HDB HOLDINGS</td>
+            <td>1111 Henry St</td>
+            <td>1250000</td>
+          </tr>
+          <tr>
+            <th scope="row">189</th>
+            <td>BROWN</td>
+            <td>PULASKI</td>
+            <td>MARQUIS YACHTS LLC</td>
+            <td>CLT COUNTRYVIEW PROPERTIES LLC</td>
+            <td>790 Markham Dr</td>
+            <td>950000</td>
+          </tr>
+          <tr>
+            <th scope="row">190</th>
+            <td>BROWN</td>
+            <td>ASHWAUBENON</td>
+            <td>ALGREM PAUL D</td>
+            <td>GLORY WAREHOUSING LLC</td>
+            <td>1140 1142 Glory Rd</td>
+            <td>3050000</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
